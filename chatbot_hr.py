@@ -6,7 +6,7 @@ from datetime import datetime
 
 st.sidebar.header("Cómo funciona")
 st.sidebar.write("""
-Esta aplicación automatiza el proceso de entrevista para agilizar el proceso. Aquí te explicamos cómo funciona:
+Esta aplicación automatiza la primer entrevista para agilizar el proceso de selección. Aquí te explicamos cómo funciona:
 
 **Características Claves:**
 - Selección de Puesto

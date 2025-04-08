@@ -6,7 +6,7 @@ from datetime import datetime
 
 st.sidebar.header("Cómo funciona")
 st.sidebar.write("""
-Esta aplicación automatiza el proceso de entrevista para diferentes puestos. Aquí te explicamos cómo funciona:
+Esta aplicación automatiza el proceso de entrevista para agilizar el proceso. Aquí te explicamos cómo funciona:
 
 **Características Claves:**
 - Selección de Puesto
@@ -14,14 +14,14 @@ Esta aplicación automatiza el proceso de entrevista para diferentes puestos. Aq
 - Evaluación Automática
 
 **Cómo Realizar las Solicitudes:**
-1. Selecciona el Puesto
+1. Selecciona el Puesto al que aplicar
 2. Ingresa tu Nombre
 3. Inicia la Entrevista
-4. Responde las Preguntas
+4. Responde las Preguntas de forma honesta y detallada.
 
 **Qué Esperar:**
-- Preguntas de la IA
-- Evaluación de tu desempeño
+- Recibirás 10 Preguntas de la IA para conocer sobre tu experiencia y tus skills
+- Recibiremos tu postulación y te contactaremos para el siguiente paso
 
 ¡Mucha suerte!
 """)

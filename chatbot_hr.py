@@ -4,6 +4,28 @@ import os
 import pandas as pd
 from datetime import datetime
 
+st.sidebar.header("Cómo funciona")
+st.sidebar.write("""
+Esta aplicación automatiza el proceso de entrevista para diferentes puestos. Aquí te explicamos cómo funciona:
+
+**Características Claves:**
+- Selección de Puesto
+- Entrevista con IA
+- Evaluación Automática
+
+**Cómo Realizar las Solicitudes:**
+1. Selecciona el Puesto
+2. Ingresa tu Nombre
+3. Inicia la Entrevista
+4. Responde las Preguntas
+
+**Qué Esperar:**
+- Preguntas de la IA
+- Evaluación de tu desempeño
+
+¡Mucha suerte!
+""")
+
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 if not GOOGLE_API_KEY:
@@ -85,28 +107,6 @@ def save_results(name, job, answers, evaluation):
     df.to_excel(filename, index=False)
 
 st.title("Entrevista Automatizada con IA")
-
-st.subheader("Cómo funciona")
-st.write("""
-Esta aplicación automatiza el proceso de entrevista para diferentes puestos. Aquí te explicamos cómo funciona:
-
-**Características Claves:**
-- **Selección de Puesto:** Elige el puesto al que deseas simular una entrevista.
-- **Entrevista con IA:** Responde a las preguntas generadas por la IA como si estuvieras en una entrevista real.
-- **Evaluación Automática:** Al finalizar, la IA evalúa tus respuestas y proporciona una calificación en habilidades técnicas y blandas, además de un comentario general.
-
-**Cómo Realizar las Solicitudes:**
-1. **Selecciona el Puesto:** Utiliza el menú desplegable para elegir el puesto.
-2. **Ingresa tu Nombre:** Escribe tu nombre en el campo de texto.
-3. **Inicia la Entrevista:** Haz clic en el botón "Iniciar Entrevista".
-4. **Responde las Preguntas:** Escribe tus respuestas en el cuadro de texto y presiona Enter.
-
-**Qué Esperar:**
-- Recibirás preguntas de la IA, una por una.
-- Después de responder todas las preguntas, recibirás una evaluación de tu desempeño.
-
-¡Mucha suerte en tu entrevista!
-""")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

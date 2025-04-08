@@ -1,16 +1,13 @@
 import streamlit as st
 import google.generativeai as genai
 import os
-from dotenv import load_dotenv
 import pandas as pd
 from datetime import datetime
 
-load_dotenv(".env")
-
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 if not GOOGLE_API_KEY:
-    st.error("Falta la API key de Google. Por favor, configúrala en el archivo .env.")
+    st.error("Falta la API key de Google. Por favor, configúrala en el archivo .streamlit/secrets.toml.")
 else:
     genai.configure(api_key=GOOGLE_API_KEY)
 
